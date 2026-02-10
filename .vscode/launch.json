@@ -1,0 +1,71 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build osm_main",
+      "name": "Debug OSM Main",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/osm_main",
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build osm_server",
+      "name": "Debug OSM Server",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/osm_server",
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build osm_tests",
+      "name": "Debug Graph Tests",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/osm_tests",
+      "args": [
+        "--gtest_color=yes",
+        "--gtest_filter=Graph*",
+      ],
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build osm_tests",
+      "name": "Debug BuildGraph Tests",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/osm_tests",
+      "args": [
+        "--gtest_color=yes",
+        "--gtest_filter=BuildGraph*",
+      ],
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "build osm_tests",
+      "name": "Debug Dijkstra Tests",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0",
+      },
+      "program": "${workspaceFolder}/osm_tests",
+      "args": [
+        "--gtest_color=yes",
+        "--gtest_filter=Dijkstra*",
+      ],
+    },
+  ],
+}

@@ -1,0 +1,39 @@
+{
+  "buildings": [
+    {
+      "id": 1,
+      "lat": 41.8720714,
+      "lon": -87.6492469,
+      "abbr": "NSQ",
+      "name": "North Side of Quad"
+    },
+    {
+      "id": 2,
+      "lat":  41.871696,
+      "lon": -87.649267,
+      "abbr": "SSQ",
+      "name": "South Side of Quad"
+    }
+  ],
+  "waypoints": [
+    {
+      "id": 3,
+      "lat": 41.871903,
+      "lon": -87.648950
+    },
+    {
+      "id": 4,
+      "lat": 41.871909,
+      "lon": -87.648435
+    },
+    {
+      "id": 5,
+      "lat": 10.00,
+      "lon": 10.00
+    }
+  ],
+  "footways": [
+    [3, 4],
+    [3, 5]
+  ]
+}
